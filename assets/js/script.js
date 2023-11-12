@@ -16,8 +16,8 @@ function saveScore() {
     let highScores = 
     JSON.parse(window.localStorage.getItem('highscores')) ||[]; 
     const savedScore = {
-    score: score,
-    name: name,
+      name: name,
+      score: score,
     };
 
     console.log(savedScore);
@@ -40,15 +40,15 @@ function saveScore() {
 
       scoreBoxEl.setAttribute(
         'style',
-        'display: flex; justify-content: center; gap: 1rem;'
+        'display: flex; align-items: center; justify-content: center; gap: 1rem; flex-direction: row-reverse;'
 
       );
 
       nameEl.textContent = highScores[i].name;
       scoreBoxEl.textContent = highScores[i].score;
 
-      scoreBoxEl.appendChild(nameEl);
       scoreBoxEl.appendChild(scoreEl);
+      scoreBoxEl.appendChild(nameEl);
 
       scoreBoardEl.appendChild(scoreBoxEl);
 
@@ -67,7 +67,7 @@ function saveScore() {
 function quizEnd() {
   clearInterval(timer);
 
-  const updatedScore = score + time * 0.5;
+  score = score + time * 0.5;
 
   scoreBoxEl.textContent = score;
 

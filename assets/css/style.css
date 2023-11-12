@@ -44,6 +44,7 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   margin-bottom: 2rem;
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
@@ -74,6 +75,22 @@ h5 {
 
 .hidden {
   display: none;
+}
+
+.score-board {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 
 #start-button {
